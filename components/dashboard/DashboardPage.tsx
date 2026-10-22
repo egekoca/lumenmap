@@ -24,6 +24,7 @@ import { SorobanFeePanel } from "@/components/dashboard/SorobanFeePanel";
 import { PeriodSelector } from "@/components/dashboard/PeriodSelector";
 import { DashboardSearch } from "@/components/dashboard/DashboardSearch";
 import { ComparisonPanel } from "@/components/dashboard/ComparisonPanel";
+import { AddressComparisonPanel } from "@/components/dashboard/AddressComparisonPanel";
 import { IssuerIntelligence } from "@/components/dashboard/IssuerIntelligence";
 import { SavedViewsControls } from "@/components/dashboard/SavedViewsControls";
 import { SnapshotBanner } from "@/components/dashboard/SnapshotBanner";
@@ -156,6 +157,7 @@ function DashboardContent() {
       </div>
 
       {/* KPIs - quick overview */}
+      {readOnly ? null : <AddressComparisonPanel />}
       <KpiCards />
 
       <ProtocolHealthScorecards />
